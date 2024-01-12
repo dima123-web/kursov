@@ -1,0 +1,19 @@
+<!-- поменять -->
+{% extends 'homepage/layot.html' %}
+
+{% block title%}
+    Метео Норильск
+{% endblock %}
+
+{% block content%}
+    <div class="features" align="center">
+         <h1 align="center"> Метео Норильск </h1>
+            {% for el in aktirovka %}
+                <div class="alert alert-warning">
+                    <h3>{{ el.title }}</h3>
+                    <p>{{  el.anons}}</p>
+                    <a href="{% url 'aktirovka-detail' el.id %}" class="btn btn-warning">Подробнее</a>
+                </div>
+            {% endfor %}
+    </div>
+{% endblock %}

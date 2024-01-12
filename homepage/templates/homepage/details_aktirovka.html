@@ -1,0 +1,14 @@
+{% extends 'homepage/layot.html' %}
+
+{% block title%}
+   {{ aktirovka_detail.title }}
+{% endblock %}
+
+{% block content%}
+    <div class="features" align="center">
+
+         <h1 align="center">{{ aktirovka_detail.title }}</h1>
+        <p style="margin-left: 10%; margin-right: 10% " >{{ aktirovka_detail.text }}</p>
+         <p>{{ aktirovka_detail.date }}</p>
+    </div>
+{% endblock %}
